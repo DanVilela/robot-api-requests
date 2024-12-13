@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "robot-api"
+version = "0.1.0"
+description = "Initial testing API with Robot Framework"
+authors = ["Daniel Vilela <dvilelaportela@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+robotframework-requests = "^0.9.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

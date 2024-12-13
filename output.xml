@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-13T01:49:09.643209" rpa="false" schemaversion="5">
+<suite id="s1" name="Model Suit" source="d:\Users\Daniel\Desktop\Cursos\Robot\robot_API\model_suit.robot">
+<test id="s1-t1" name="Realizing frist GET in Faker API" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-12-13T01:49:10.563459" level="INFO">Creating Session using : alias=faker_api, url=https://fakerapi.it/api/v2/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=faker_api</arg>
+<arg>url=https://fakerapi.it/api/v2/</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-12-13T01:49:10.562863" elapsed="0.005188"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-12-13T01:49:11.937138" level="INFO">GET Request : url=https://fakerapi.it/api/v2/addresses?_quantity=1 
+ path_url=/api/v2/addresses?_quantity=1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-12-13T01:49:11.938115" level="INFO">GET Response : url=https://fakerapi.it/api/v2/addresses?_quantity=1 
+ status=200, reason=OK 
+ headers={'Server': 'nginx', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'X-Powered-By': 'PHP/8.3.8', 'Cache-Control': 'no-cache, private', 'Date': 'Fri, 13 Dec 2024 04:49:13 GMT', 'X-RateLimit-Limit': '60', 'X-RateLimit-Remaining': '59', 'Access-Control-Allow-Origin': '*', 'X-UA-Compatible': 'IE=Edge,chrome=1', 'Content-Encoding': 'gzip'} 
+ body={"status":"OK","code":200,"locale":"en_US","seed":null,"total":1,"data":[{"id":1,"street":"41271 Hermann Ford","streetName":"Aiden Cove","buildingNumber":"71579","city":"Rohanview","zipcode":"24304-0150","country":"Chad","country_code":"TD","latitude":-8.299536,"longitude":28.746206}]} 
+ </msg>
+<msg time="2024-12-13T01:49:11.938762" level="INFO">C:\Users\danie\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'fakerapi.it'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2024-12-13T01:49:11.943615" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<var>${RESPONSE}</var>
+<arg>alias=faker_api</arg>
+<arg>url=addresses?_quantity=1</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-12-13T01:49:10.572551" elapsed="1.371710"/>
+</kw>
+<kw name="Delete All Sessions" owner="RequestsLibrary">
+<msg time="2024-12-13T01:49:11.947010" level="INFO">Deleting All Sessions</msg>
+<doc>Removes all the session objects</doc>
+<status status="PASS" start="2024-12-13T01:49:11.946002" elapsed="0.002251"/>
+</kw>
+<kw name="Session Exists" owner="RequestsLibrary">
+<msg time="2024-12-13T01:49:11.951411" level="INFO">${return} = False</msg>
+<var>${return}</var>
+<arg>alias=faker_api</arg>
+<doc>Return True if the session has been already created</doc>
+<status status="PASS" start="2024-12-13T01:49:11.950232" elapsed="0.001691"/>
+</kw>
+<status status="PASS" start="2024-12-13T01:49:10.561372" elapsed="1.392360"/>
+</test>
+<status status="PASS" start="2024-12-13T01:49:09.650148" elapsed="2.306323"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Model Suit">Model Suit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
