@@ -5,7 +5,7 @@ Library    RequestsLibrary
 
 *** Test Cases***
 
-Realizing frist POST in Faker API
+Realizing frist POST in Server Rest
     Create Session    alias=server_rest    url=https://serverest.dev
     
     ${HEADER}    Create Dictionary    Content-Type=application/json

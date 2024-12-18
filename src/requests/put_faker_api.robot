@@ -5,7 +5,7 @@ Library    RequestsLibrary
 
 *** Test Cases***
 
-Realizing frist PUT in Faker API
+Realizing frist PUT in Server Rest
     Create Session    alias=server_rest    url=https://serverest.dev
     
     ${HEADER}    Create Dictionary    Content-Type=application/json
